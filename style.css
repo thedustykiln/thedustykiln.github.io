@@ -174,10 +174,8 @@ p {
 .hero-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-    object-position: center;
-
+    object-position: center 20%;
     display: block;
 }
 
@@ -528,8 +526,4 @@ footer p {
         padding: 30px 20px;
     }
 
-}
-
-.hero {
-    background: red !important;
 }
