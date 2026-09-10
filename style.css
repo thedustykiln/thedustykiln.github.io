@@ -1,28 +1,391 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f2ed;
+    color: #292724;
+
     line-height: 1.6;
 }
 
+
+/* =========================
+   HEADER
+   ========================= */
+
 header {
-    margin-bottom: 60px;
+    border-bottom: 1px solid #d8d2ca;
+    background: #f5f2ed;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 24px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #292724;
+
+    text-decoration: none;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #5e5953;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #292724;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    line-height: 1.15;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 0;
+    font-size: clamp(3rem, 7vw, 5.5rem);
 }
 
 h2 {
-    margin-top: 50px;
+    font-size: 2.2rem;
 }
 
-a {
+p {
+    color: #625d57;
+}
+
+.eyebrow {
+    color: #85766b;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 80px 40px;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.hero-description {
+    max-width: 550px;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: #514b45;
+    color: #ffffff;
+
     text-decoration: none;
+
+    border-radius: 2px;
 }
 
-a:hover {
-    text-decoration: underline;
+.button:hover {
+    background: #3d3935;
+}
+
+
+/* =========================
+   INTRO
+   ========================= */
+
+.intro {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
+
+    text-align: center;
+
+    border-top: 1px solid #d8d2ca;
+    border-bottom: 1px solid #d8d2ca;
+}
+
+.intro h2 {
+    margin: 20px 0;
+}
+
+
+/* =========================
+   FEATURED
+   ========================= */
+
+.featured {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 30px;
+}
+
+.featured > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================
+   PRODUCT IMAGES
+   ========================= */
+
+.product-image,
+.about-image {
+    background: #d8d0c6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #776d64;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+}
+
+.product-image {
+    aspect-ratio: 1 / 1;
+}
+
+.about-image {
+    min-height: 500px;
+}
+
+
+/* =========================
+   PRODUCT
+   ========================= */
+
+.product-preview h3 {
+    margin-bottom: 0;
+}
+
+.product-preview p {
+    margin-top: 5px;
+}
+
+.shop-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 70px 40px;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+
+    margin-bottom: 5px;
+}
+
+.description {
+    max-width: 400px;
+
+    margin-top: 0;
+}
+
+.price {
+    color: #292724;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+
+.page-header {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 120px 40px 80px;
+}
+
+.page-header h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    margin: 20px 0;
+}
+
+.page-header p:last-child {
+    max-width: 600px;
+
+    font-size: 1.15rem;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-content {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px 120px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-content p {
+    max-width: 500px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    border-top: 1px solid #d8d2ca;
+
+    padding: 30px 40px;
+
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding: 60px 20px;
+    }
+
+    .intro {
+        padding: 70px 20px;
+    }
+
+    .featured {
+        padding: 70px 20px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .shop-grid {
+        padding: 20px 20px 70px;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .page-header {
+        padding: 80px 20px 50px;
+    }
+
+    .about-content {
+        padding: 20px 20px 80px;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
 }
