@@ -529,3 +529,7 @@ footer p {
     }
 
 }
+
+.hero {
+    background: red !important;
+}
