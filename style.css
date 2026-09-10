@@ -150,19 +150,17 @@ p {
    ========================= */
 
 .hero {
-    min-height: 720px;
-
-    max-width: 1200px;
-    margin: 0 auto;
-
-    padding: 100px 40px;
-
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
 }
 
 .hero-text {
-    max-width: 850px;
+   max-width: 750px;
+   margin: 0 auto;
 }
 
 .hero h1 {
