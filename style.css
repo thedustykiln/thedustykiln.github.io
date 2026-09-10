@@ -158,6 +158,23 @@ p {
     padding: 80px 20px;
 }
 
+.hero-image {
+    width: 100%;
+    height: 400px;
+
+    margin-bottom: 70px;
+
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
 .hero-text {
    max-width: 750px;
    margin: 0 auto;
